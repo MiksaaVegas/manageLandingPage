@@ -1,62 +1,64 @@
-@mixin getStartedBtn{
+@mixin getStartedBtn {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   background-color: #f25f3e;
   padding: 1rem 2rem;
   border-radius: 1000px;
-  -webkit-box-shadow: 0px 10px 35px -9px rgba(242,95,62,0.85), 0px 2px 35px -11px rgba(0,0,0,0.35); 
-  box-shadow: 0px 10px 35px -15px rgba(242,95,62,0.85), 0px 2px 35px -11px rgba(0,0,0,0.35);
+  -webkit-box-shadow: 0px 10px 35px -9px rgba(242, 95, 62, 0.85),
+    0px 2px 35px -11px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 10px 35px -15px rgba(242, 95, 62, 0.85),
+    0px 2px 35px -11px rgba(0, 0, 0, 0.35);
   transition: opacity 200ms ease-in-out;
-  &:hover{
+  &:hover {
     transition: opacity 200ms ease-in-out;
-    opacity: .75;
+    opacity: 0.75;
     color: #fff;
   }
 }
-@mixin flexCenter{
+@mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body{
+body {
   margin: 0;
   font-family: "Be Vietnam Pro", sans-serif;
   overflow-x: hidden;
   user-select: none;
 }
-.container-fluid{
+.container-fluid {
   padding: 0 14rem;
 }
-.getStartedBtn{
+.getStartedBtn {
   @include getStartedBtn();
 }
-section{
+section {
   padding-left: 2rem;
 }
-nav{
+nav {
   padding: 0;
   margin: 3.5rem 0rem !important;
   vertical-align: middle;
-  .logo{
+  .logo {
     @include flexCenter();
   }
-  .navLinks{
+  .navLinks {
     text-align: center;
     display: flex;
     align-items: center;
-    ul{
+    ul {
       display: flex;
       justify-content: space-evenly;
       flex-basis: 100%;
       list-style: none;
       margin: 0;
       padding: 0 6.6rem; //* PADDING FOR THE WIDTH OF NAVBAR
-      li{
-        :hover{
-          color:#9095a7;
+      li {
+        :hover {
+          color: #9095a7;
         }
-        a{
+        a {
           text-decoration: none;
           color: #21233c;
           font-weight: 500;
@@ -64,24 +66,74 @@ nav{
       }
     }
   }
-  .navGetStarted{
+  .navGetStarted {
     @include flexCenter();
   }
 }
-.heroSection{
+.heroSection {
   padding-left: 2rem;
   padding-top: 9rem;
-  .heroHeader{
+  .heroHeader {
     color: #21233c;
     font-weight: 700;
     font-size: 4rem;
     line-height: 4.5rem;
   }
-  .heroPara{
+  .heroPara {
     color: #9095a7;
-    opacity: .9;
+    font-weight: 300;
     line-height: 1.5rem;
     padding-bottom: 4rem;
     padding-top: 2rem;
+  }
+}
+.firstBgImg {
+  position: absolute;
+  z-index: -1;
+  transform: scale(1.2);
+  top: 0;
+  right: 0;
+  margin-top: -2rem;
+  margin-right: -2rem;
+}
+.aboutUsSection {
+  margin: 7rem 0;
+  .col-md-6:nth-of-type(1){
+    margin-top: 3rem;
+    padding-right: 10rem;
+    .aboutUsHeading {
+      color: #21233c;
+      font-size: 2.5rem;
+      font-weight: 700;
+      padding-bottom: 2rem;
+    }
+    .aboutUsPara {
+      color: #9095a7;
+      font-weight: 400;
+    }
+  }
+  .col-md-6:nth-of-type(2){
+    padding-left: 4rem;
+    .aboutUsCard {
+      .aboutUsCardHeading{
+        font-size: 1rem;
+        color: #21233c;
+        font-weight: 700;
+        margin: 3rem 0 1.5rem 0;
+        span{
+          padding: .5rem 1.75rem;
+          background-color: #f25f3e;
+          border-radius: 1000px;
+          color: #fff;
+          margin-right: 2rem;
+        }
+      }
+      .aboutUsCardPara{
+        color: #9095a7;
+        font-weight: 400;
+        margin-left: 6rem;
+        padding-right: 5rem;
+      }
+    }
   }
 }
