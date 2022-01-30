@@ -11,6 +11,7 @@
   &:hover{
     transition: opacity 200ms ease-in-out;
     opacity: .75;
+    color: #fff;
   }
 }
 @mixin flexCenter{
@@ -21,10 +22,21 @@
 body{
   margin: 0;
   font-family: "Be Vietnam Pro", sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+}
+.container-fluid{
+  padding: 0 14rem;
+}
+.getStartedBtn{
+  @include getStartedBtn();
+}
+section{
+  padding-left: 2rem;
 }
 nav{
   padding: 0;
-  margin: 3.5rem 14rem !important;
+  margin: 3.5rem 0rem !important;
   vertical-align: middle;
   .logo{
     @include flexCenter();
@@ -35,7 +47,7 @@ nav{
     align-items: center;
     ul{
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       flex-basis: 100%;
       list-style: none;
       margin: 0;
@@ -54,8 +66,22 @@ nav{
   }
   .navGetStarted{
     @include flexCenter();
-    .getStartedBtn{
-      @include getStartedBtn();
-    }
+  }
+}
+.heroSection{
+  padding-left: 2rem;
+  padding-top: 9rem;
+  .heroHeader{
+    color: #21233c;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .heroPara{
+    color: #9095a7;
+    opacity: .9;
+    line-height: 1.5rem;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
   }
 }
