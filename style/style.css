@@ -1,3 +1,55 @@
 body {
   margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+nav {
+  padding: 0;
+  margin: 3.5rem 14rem !important;
+  vertical-align: middle;
+}
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .navLinks {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+nav .navLinks ul {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0 6.6rem;
+}
+nav .navLinks ul li :hover {
+  color: #9095a7;
+}
+nav .navLinks ul li a {
+  text-decoration: none;
+  color: #21233c;
+  font-weight: 500;
+}
+nav .navGetStarted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .navGetStarted .getStartedBtn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #f25f3e;
+  padding: 1rem 2rem;
+  border-radius: 1000px;
+  box-shadow: 0px 10px 35px -15px rgba(242, 95, 62, 0.85), 0px 2px 35px -11px rgba(0, 0, 0, 0.35);
+  transition: opacity 200ms ease-in-out;
+}
+nav .navGetStarted .getStartedBtn:hover {
+  transition: opacity 200ms ease-in-out;
+  opacity: 0.75;
 }/*# sourceMappingURL=style.css.map */
