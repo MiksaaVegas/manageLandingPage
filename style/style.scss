@@ -33,9 +33,6 @@ body {
 .getStartedBtn {
   @include getStartedBtn();
 }
-section {
-  padding-left: 2rem;
-}
 nav {
   padding: 0;
   margin: 3.5rem 0rem !important;
@@ -182,4 +179,30 @@ nav {
   z-index: -1;
   margin-top: -20rem;
   margin-left: -27rem;
+}
+.simplifySection{
+  .container-fluid{
+    background-color: #f25f3e;
+    background-image: url("../assets/images/bg-simplify-section-desktop.svg");
+    color: #fff;
+    h2{
+      padding: 3rem 0;
+      font-size: 2.5rem;
+    }
+    .col-md-6:nth-of-type(2){
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      a{
+        background-color: #fff;
+        color: #f25f3e;
+        transition: color 300ms ease-in-out;
+        &:hover{
+          opacity: 1;
+          color: #f1876f;
+          transition: color 300ms ease-in-out;
+        }
+      }
+    }
+  }
 }
